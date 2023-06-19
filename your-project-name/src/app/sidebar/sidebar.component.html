@@ -1,0 +1,13 @@
+<div class="sidebar" [ngClass]="{'sidebar-open': isSidebarOpen}">
+  <div class="hamburger-menu" (click)="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <button class="add-bank-account" (click)="openForm()" *ngIf="isSidebarOpen">Add Bank Account</button>
+
+  <div class="form-container" *ngIf="isFormOpen">
+    <app-bank-account-form></app-bank-account-form>
+  </div>
+</div>

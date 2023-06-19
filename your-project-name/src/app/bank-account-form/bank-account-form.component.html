@@ -1,0 +1,36 @@
+<div class="bank-account-form">
+  <h2>Add Bank Account</h2>
+  <div class="checkbox-group">
+    <label>
+      <input type="checkbox" [(ngModel)]="showNameInput"> Name
+    </label>
+    <label>
+      <input type="checkbox" [(ngModel)]="showAccountNumberInput"> Account Number
+    </label>
+    <label>
+      <input type="checkbox" [(ngModel)]="showIfscCodeInput"> IFSC Code
+    </label>
+  </div>
+  <form (submit)="submitForm()">
+    <div class="form-group" *ngIf="showNameInput">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name">
+    </div>
+    <div class="form-group" *ngIf="showAccountNumberInput">
+      <label for="accountNumber">Account Number:</label>
+      <input type="number" id="accountNumber" name="accountNumber" [(ngModel)]="accountNumber">
+    </div>
+    <div class="form-group" *ngIf="showIfscCodeInput">
+      <label for="ifscCode">IFSC Code:</label>
+      <input type="text" id="ifscCode" name="ifscCode" [(ngModel)]="ifscCode">
+    </div>
+    <div class="sub-btn">
+      <button type="submit">Submit</button> 
+    </div>
+    
+  </form>
+
+  <div class="popup" *ngIf="isBankAccountAdded">
+    <p>Bank Account Added!</p>
+  </div>
+</div>

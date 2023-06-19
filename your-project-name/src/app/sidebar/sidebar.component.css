@@ -1,0 +1,62 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.sidebar-open {
+  width: 100px;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Adjust the left position */
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-open .hamburger-menu span:nth-child(1),
+.sidebar-open .hamburger-menu span:nth-child(3) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.sidebar-open .hamburger-menu span:nth-child(2) {
+  transform: scale(0);
+}
+
+.sidebar-open .hamburger-menu span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.add-bank-account {
+  display: block;
+  margin-top: 200px;
+  cursor: pointer;
+}
+
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
